@@ -117,10 +117,6 @@ public class FButton extends Button implements View.OnTouchListener {
             } else if (attr == R.styleable.FButton_shadowColor) {
                 mShadowColor = typedArray.getColor(attr, R.color.fbutton_default_shadow_color);
                 isShadowColorDefined = true;
-            } else if (attr == R.styleable.FButton_shadowHeight) {
-                mShadowHeight = typedArray.getDimensionPixelSize(attr, R.dimen.fbutton_default_shadow_height);
-            } else if (attr == R.styleable.FButton_cornerRadius) {
-                mCornerRadius = typedArray.getDimensionPixelSize(attr, R.dimen.fbutton_default_conner_radius);
             }
         }
         typedArray.recycle();
@@ -158,7 +154,7 @@ public class FButton extends Button implements View.OnTouchListener {
             mShadowColor = Color.HSVToColor(alpha, hsv);
         }
         //Create pressed background and unpressed background drawables
-		
+
         if (this.isEnabled()) {
             if (isShadowEnabled) {
                 pressedDrawable = createDrawable(mCornerRadius, Color.TRANSPARENT, mButtonColor);
@@ -172,7 +168,7 @@ public class FButton extends Button implements View.OnTouchListener {
             Color.colorToHSV(mButtonColor, hsv);
             hsv[1] *= 0.25f; // saturation component
             int disabledColor = mShadowColor = Color.HSVToColor(alpha, hsv);
-			// Disabled button does not have shadow
+            // Disabled button does not have shadow
             pressedDrawable = createDrawable(mCornerRadius, disabledColor, Color.TRANSPARENT);
             unpressedDrawable = createDrawable(mCornerRadius, disabledColor, Color.TRANSPARENT);
         }
@@ -190,6 +186,7 @@ public class FButton extends Button implements View.OnTouchListener {
             this.setBackgroundDrawable(background);
         }
     }
+
     private LayerDrawable createDrawable(int radius, int topColor, int bottomColor) {
 
         float[] outerRadius = new float[]{radius, radius, radius, radius, radius, radius, radius, radius};

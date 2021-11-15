@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-flat-button.iml" filepath="$PROJECT_DIR$/.idea/modules/android-flat-button.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo/android-flat-button.demo.iml" filepath="$PROJECT_DIR$/.idea/modules/demo/android-flat-button.demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/android-flat-button.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/android-flat-button.library.iml" />
+    </modules>
+  </component>
+</project>
